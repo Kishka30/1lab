@@ -3,13 +3,13 @@
 #include <ctype.h>
 #include <locale.h>
 
-// Функция для проверки, является ли строка палиндромом
+//Проверка на палиндром
 int isPalindrome(const char *str) {
     int left = 0;
     int right = strlen(str) - 1;
 
     while (left < right) {
-        // Пропускаем неалфавитные символы
+        //Пропускаем неалфавитные символы
         while (left < right && !isalpha(str[left])) {
             left++;
         }
@@ -17,30 +17,30 @@ int isPalindrome(const char *str) {
             right--;
         }
 
-        // Сравниваем символы, приводя их к одному регистру
+        //Сравниваем символы в одном регистре
         if (tolower(str[left]) != tolower(str[right])) {
             return 0; // Не палиндром
         }
         left++;
         right--;
     }
-    return 1; // Палиндром
+    return 1; //Палиндром
 }
 
 int main() {
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
     char str[100];
-    int continueProgram = 1;
+    int continueProgram = 1; //Чтобы несколько сразу проверять
 
     while (continueProgram) {
         printf("Введите строку (или 0 для выхода): ");
         fgets(str, sizeof(str), stdin);
 
-        // Удаляем символ новой строки, если он присутствует
+        //Удаляем символ новой строки, если он присутствует
         str[strcspn(str, "\n")] = 0;
 
-        // Проверяем, хочет ли пользователь выйти
+        //Если 0 выход
         if (strcmp(str, "0") == 0) {
             continueProgram = 0;
             continue;
