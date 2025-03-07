@@ -27,6 +27,8 @@ int isPalindrome(const char *str) {
     return 1; //Палиндром
 }
 
+//комени для проверки
+
 int main() {
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
