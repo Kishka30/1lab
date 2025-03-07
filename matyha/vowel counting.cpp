@@ -2,7 +2,7 @@
 #include <locale>//работа с локалями для wstring
 
 using namespace std;
-
+//gdsfsfsfssss
 //подсчет гласных букв
 int countEnglishVowels(const wstring& str) {
     wstring vowels = L"aeiouyAEIOUY"; //список подсчитываемых букв
