@@ -1,13 +1,14 @@
-#include <iostream>
-#include <locale>
+#include <iostream>// комментарий //
+#include <locale>//работа с локалями для wstring
 
 using namespace std;
-
+//gdsfsfsfssss
+//подсчет гласных букв
 int countEnglishVowels(const wstring& str) {
-    wstring vowels = L"aeiouyAEIOUY";
+    wstring vowels = L"aeiouyAEIOUY"; //список подсчитываемых букв
     int count = 0;
     for (wchar_t ch : str) {
-        if (vowels.find(ch) != wstring::npos) count++;
+        if (vowels.find(ch) != wstring::npos) count++; //проверка каждого символа в строке
     }
     return count;
 }
